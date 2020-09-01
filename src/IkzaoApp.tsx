@@ -3,7 +3,7 @@ import {SimpleFooter} from "@itecgo/blocks/dist/components/SimpleFooter/SimpleFo
 import {SimpleBreadcrumb} from "@itecgo/blocks/dist/components/SimpleBreadcrumb/SimpleBreadcrumb";
 import {SimpleNavbar} from "@itecgo/blocks/dist/components/SimpleNavbar/SimpleNavbar";
 
-export class App extends React.Component {
+export class IkzaoApp extends React.Component {
   render() {
     return (
         <div>

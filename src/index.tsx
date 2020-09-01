@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {App} from './App';
+import {IkzaoApp} from './IkzaoApp';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {ProtocolConverterApp} from "./ProtocolConverterApp";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <IkzaoApp />
+    <ProtocolConverterApp />
   </React.StrictMode>,
   document.getElementById('root')
 );
