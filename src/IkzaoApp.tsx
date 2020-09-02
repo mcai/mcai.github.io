@@ -9,8 +9,9 @@ import {SimpleTextField} from "@itecgo/blocks/dist/fields/SimpleTextField";
 import {SimpleBooleanField} from "@itecgo/blocks/dist/fields/SimpleBooleanField";
 import {SimpleDateTimeField} from "@itecgo/blocks/dist/fields/SimpleDateTimeField";
 import {SimpleNumberField} from "@itecgo/blocks/dist/fields/SimpleNumberField";
-import {SimpleForm} from "@itecgo/blocks/dist/components/SimpleForm/SimpleForm";
 import {SimpleTextInput} from "@itecgo/blocks/dist/inputs/SimpleTextInput/SimpleTextInput";
+import {SimpleUpdateForm} from "@itecgo/blocks/dist/forms/SimpleUpdateForm/SimpleUpdateForm";
+import {SimpleAddForm} from "@itecgo/blocks/dist/forms/SimpleAddForm/SimpleAddForm";
 
 export class IkzaoApp extends React.Component<any, any> {
     dataProvider: SimpleDataProvider
@@ -127,7 +128,24 @@ export class IkzaoApp extends React.Component<any, any> {
                     ]}
                 />
 
-                <SimpleForm
+                <SimpleAddForm
+                    dataProvider={this.dataProvider}
+                    resource={"customers/"}
+                    addAction={"addCustomer/"}
+                    inputs={
+                        [
+                            <SimpleTextInput label={"名称"} name={"name"}/>,
+                            <SimpleTextInput label={"公司名称"} name={"companyName"}/>,
+                            <SimpleTextInput label={"手机号码"} name={"mobile"}/>,
+                            <SimpleTextInput label={"电话号码"} name={"phone"}/>,
+                            <SimpleTextInput label={"微信"} name={"wechat"}/>,
+                            <SimpleTextInput label={"旺旺"} name={"wangwang"}/>,
+                        ]
+                    }
+                    submitButtonText={"添加"}
+                />
+
+                <SimpleUpdateForm
                     dataProvider={this.dataProvider}
                     resource={"customers/"}
                     getByIdAction={"getCustomer/"}
