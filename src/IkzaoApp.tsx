@@ -10,45 +10,6 @@ import {SimpleBooleanField} from "@itecgo/blocks/dist/fields/SimpleBooleanField"
 import {SimpleDateTimeField} from "@itecgo/blocks/dist/fields/SimpleDateTimeField";
 import {SimpleNumberField} from "@itecgo/blocks/dist/fields/SimpleNumberField";
 
-export interface RestCustomer {
-    id: number
-    name: string
-
-    companyName: string
-
-    mobile: string
-    mobileIsValid: boolean
-
-    phone: string
-
-    wechat: string
-    wangwang: string
-
-    email: string
-    web: string
-
-    province: string
-    city: string
-    district: string
-    address: string
-
-    date: string
-
-    operatorId: number
-    operatorName: string
-    operatorMobile: string
-
-    description: string
-
-    numDesignDocuments: number
-    numQuotations: number
-    numOrders: number
-    numPaidOrCutOrders: number
-    totalPriceOfPaidOrCutOrders: number
-
-    canRemove: boolean
-}
-
 export class IkzaoApp extends React.Component<any, any> {
     dataProvider: SimpleDataProvider
 
