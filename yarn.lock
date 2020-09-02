@@ -1182,10 +1182,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@itecgo/blocks@^0.0.53":
-  version "0.0.53"
-  resolved "https://registry.yarnpkg.com/@itecgo/blocks/-/blocks-0.0.53.tgz#a7405a5fa15c4c84bc15625aacda33abd2ff2505"
-  integrity sha512-CL9NjT4toK8TPwXZb1FcHQHexStLo3UsXaRupUU5Hyy0kA1OWMCiVjfGawQ9IcuqPHWkgh/l3JqkL4O17lfuiQ==
+"@itecgo/blocks@^0.0.55":
+  version "0.0.55"
+  resolved "https://registry.yarnpkg.com/@itecgo/blocks/-/blocks-0.0.55.tgz#5bc795fb8ea9538b544aaee4dc2fb64daafa1106"
+  integrity sha512-7nDz/+IlAkEZw7BBM61wpjbIAfTxNdj8Q8OWkgky8S084ZZHeFtRaTRB0cCEL1BOTvee8/FkkdXVNlvUT2BSVQ==
   dependencies:
     bootstrap "^4.5.2"
     final-form "^4.20.1"
