@@ -15,7 +15,6 @@ import {SimpleAddForm} from "@itecgo/blocks/dist/forms/SimpleAddForm/SimpleAddFo
 import {Container} from "react-bootstrap";
 import {SimpleToast, Toastify} from "@itecgo/blocks/dist/components/SimpleToast/SimpleToast";
 import {SimpleToastType} from "@itecgo/blocks/dist/components/SimpleToast/SimpleToastType";
-import {SimpleExport} from "@itecgo/blocks/dist/components/SimpleExport/SimpleExport";
 
 export class App extends React.Component<any, any> {
     dataProvider: SimpleDataProvider
@@ -129,14 +128,6 @@ export class App extends React.Component<any, any> {
                         active: true
                     },
                 ]}/>
-
-                <SimpleExport
-                    pageSize={10}
-                    dataProvider={this.dataProvider}
-                    resource={resource}
-                    action={"getCustomers/"}
-                    fields={fields}
-                />
 
                 <SimpleTable
                     pageSize={10}
