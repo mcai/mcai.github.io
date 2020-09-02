@@ -154,6 +154,9 @@ export class IkzaoApp extends React.Component<any, any> {
                     resource={"customers/"}
                     getByIdAction={"getCustomer/"}
                     updateAction={"updateCustomer/"}
+                    updateExtraData={{
+                        operatorId: 1
+                    }}
                     id={4143}
                     inputs={
                         [
