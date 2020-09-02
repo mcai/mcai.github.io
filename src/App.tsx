@@ -13,14 +13,19 @@ import {SimpleTextInput} from "@itecgo/blocks/dist/inputs/SimpleTextInput/Simple
 import {SimpleUpdateForm} from "@itecgo/blocks/dist/forms/SimpleUpdateForm/SimpleUpdateForm";
 import {SimpleAddForm} from "@itecgo/blocks/dist/forms/SimpleAddForm/SimpleAddForm";
 import {Container} from "react-bootstrap";
+import {SimpleToast, Toastify} from "@itecgo/blocks/dist/components/SimpleToast/SimpleToast";
+import {SimpleToastType} from "@itecgo/blocks/dist/components/SimpleToast/SimpleToastType";
 
-export class IkzaoApp extends React.Component<any, any> {
+export class App extends React.Component<any, any> {
     dataProvider: SimpleDataProvider
 
     constructor(props: any) {
         super(props);
 
         this.dataProvider = new SimpleRestDataProvider("http://www.ikzao.com:5000/rest/");
+
+        this.state = {
+        };
     }
 
     render() {
@@ -129,6 +134,8 @@ export class IkzaoApp extends React.Component<any, any> {
                     ]}
                 />
 
+                <SimpleToast/>
+
                 <SimpleAddForm
                     dataProvider={this.dataProvider}
                     resource={"customers/"}
@@ -147,6 +154,18 @@ export class IkzaoApp extends React.Component<any, any> {
                         ]
                     }
                     submitButtonText={"添加"}
+                    onSuccess={() => {
+                        Toastify(
+                            SimpleToastType.Success,
+                            "添加客户成功!"
+                        );
+                    }}
+                    onFailure={() => {
+                        Toastify(
+                            SimpleToastType.Error,
+                            "添加客户失败!"
+                        );
+                    }}
                 />
 
                 <SimpleUpdateForm
@@ -169,6 +188,18 @@ export class IkzaoApp extends React.Component<any, any> {
                         ]
                     }
                     submitButtonText={"更新"}
+                    onSuccess={() => {
+                        Toastify(
+                            SimpleToastType.Success,
+                            "更新客户成功!"
+                        );
+                    }}
+                    onFailure={() => {
+                        Toastify(
+                            SimpleToastType.Error,
+                            "更新客户失败!"
+                        );
+                    }}
                 />
 
                 <SimpleFooter brand={{
