@@ -176,7 +176,7 @@ export class App extends React.Component<any, any> {
                     updateExtraData={{
                         operatorId: 1
                     }}
-                    id={4143}
+                    id={4153}
                     inputs={
                         [
                             <SimpleTextInput label={"名称"} name={"name"}/>,
