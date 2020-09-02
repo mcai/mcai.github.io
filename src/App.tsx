@@ -53,72 +53,67 @@ export class App extends React.Component<any, any> {
                         title: "蚁克造",
                         href: "/"
                     }}
-                    items={[
+                    sections={[
                         {
-                            key: "operators",
+                            id: "users",
                             title: "员工",
-                            href: "/",
-                            active: true
+                            items: [
+                                {
+                                    key: "users",
+                                    title: "全部员工管理",
+                                    href: "/users"
+                                }
+                            ]
                         },
                         {
-                            key: "customers",
+                            id: "customers",
                             title: "客户",
-                            href: "/",
-                            active: true
+                            items: []
                         },
                         {
-                            key: "documents",
+                            id: "documents",
                             title: "文档",
-                            href: "/",
-                            active: true
+                            items: []
                         },
                         {
-                            key: "designDocuments",
+                            id: "designDocuments",
                             title: "图纸",
-                            href: "/",
-                            active: true
+                            items: []
                         },
                         {
-                            key: "quotations",
+                            id: "quotations",
                             title: "报价单",
-                            href: "/",
-                            active: true
+                            items: []
                         },
                         {
-                            key: "orders",
+                            id: "orders",
                             title: "订单",
-                            href: "/",
-                            active: true
+                            items: []
                         },
                         {
-                            key: "nestings",
+                            id: "nestings",
                             title: "加工",
-                            href: "/",
-                            active: true
+                            items: []
                         },
                         {
-                            key: "settings",
+                            id: "settings",
                             title: "设置",
-                            href: "/",
-                            active: true
+                            items: []
                         },
                         {
-                            key: "eventLogs",
+                            id: "eventLogs",
                             title: "日志",
-                            href: "/",
-                            active: true
+                            items: []
                         },
                         {
-                            key: "summaries",
+                            id: "summaries",
                             title: "统计",
-                            href: "/",
-                            active: true
+                            items: []
                         },
                         {
-                            key: "help",
+                            id: "help",
                             title: "帮助",
-                            href: "/",
-                            active: true
+                            items: []
                         },
                     ]}
                 />
