@@ -1119,10 +1119,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@itecgo/blocks@^0.0.32":
-  version "0.0.32"
-  resolved "https://registry.yarnpkg.com/@itecgo/blocks/-/blocks-0.0.32.tgz#13723efcb82b137c36a3a5510ed5bd0ed31fd887"
-  integrity sha512-LMV2VBSih9WGAn5LOci2dBtqHAhFBG2Fxtk272n/NQxxseAjMrF7jnx5gY0lpC1m8a2TN8Fia7QRJl606V5dlg==
+"@itecgo/blocks@^0.0.36":
+  version "0.0.36"
+  resolved "https://registry.yarnpkg.com/@itecgo/blocks/-/blocks-0.0.36.tgz#afca625106ad9e3d1097ec6a5284912b3b326f4d"
+  integrity sha512-lU8rN8rDJpgyFhunyXYObAR1WkXsXsCmH+t7XNydN0deugX6fdtC2JFBUWrjVYdZCb73NQBAPLyUFip5kuqBLA==
   dependencies:
     bootstrap "^4.5.2"
     final-form "^4.20.1"
@@ -1134,6 +1134,7 @@
     react-bootstrap "^1.3.0"
     react-data-export "^0.6.0"
     react-dom "^16.13.1"
+    react-toastify "^6.0.8"
     superagent "^6.1.0"
     xlsx "^0.16.6"
 
@@ -8907,6 +8908,15 @@ react-scripts@3.4.3:
     workbox-webpack-plugin "4.3.1"
   optionalDependencies:
     fsevents "2.1.2"
+
+react-toastify@^6.0.8:
+  version "6.0.8"
+  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-6.0.8.tgz#84625d81d0fd01902a7f4c6f317eb074cb3bba67"
+  integrity sha512-NSqCNwv+C4IfR+c92PFZiNyeBwOJvigrP2bcRi2f6Hg3WqcHhEHOknbSQOs9QDFuqUjmK3SOrdvScQ3z63ifXg==
+  dependencies:
+    classnames "^2.2.6"
+    prop-types "^15.7.2"
+    react-transition-group "^4.4.1"
 
 react-transition-group@^4.4.1:
   version "4.4.1"

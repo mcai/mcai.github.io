@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {IkzaoApp} from './IkzaoApp';
+import {App} from './App';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <IkzaoApp />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
