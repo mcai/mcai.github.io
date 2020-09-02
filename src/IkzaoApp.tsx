@@ -2,10 +2,10 @@ import React from 'react';
 import {SimpleFooter} from "@itecgo/blocks/dist/components/SimpleFooter/SimpleFooter";
 import {SimpleBreadcrumb} from "@itecgo/blocks/dist/components/SimpleBreadcrumb/SimpleBreadcrumb";
 import {SimpleNavbar} from "@itecgo/blocks/dist/components/SimpleNavbar/SimpleNavbar";
-import {ServiceMethod} from "@itecgo/blocks/dist/services/ServiceMethod";
-import {ServiceManager} from "@itecgo/blocks/dist/services/ServiceManager";
 import {SimpleTable} from "@itecgo/blocks/dist/components/SimpleTable/SimpleTable";
 import {Formatting} from "@itecgo/blocks/dist/utils/Formatting";
+import {SimpleDataProvider} from "@itecgo/blocks/dist/data/SimpleDataProvider";
+import {SimpleRestDataProvider} from "@itecgo/blocks/dist/data/SimpleRestDataProvider";
 
 export interface Paging<ItemT> {
     itemsInCurrentPage: ItemT[]
@@ -30,6 +30,14 @@ export interface RestOperator {
 }
 
 export class IkzaoApp extends React.Component<any, any> {
+    dataProvider: SimpleDataProvider
+
+    constructor(props: any) {
+        super(props);
+
+        this.dataProvider = new SimpleRestDataProvider("http://www.ikzao.com:5000/Rest/");
+    }
+
     render() {
         return (
             <div>
@@ -112,13 +120,9 @@ export class IkzaoApp extends React.Component<any, any> {
                     pageSize={10}
                     pageNum={0}
                     getItems={async (pageSize, pageNum) => {
-                        return await ServiceManager.call<Paging<RestOperator>>({
-                            url: "http://www.ikzao.com:5000/Rest/Operators/getOperators",
-                            method: ServiceMethod.get,
-                            params: {
-                                "pageSize": pageSize,
-                                "pageNum": pageNum
-                            }
+                        return await this.dataProvider.getList<RestOperator>("Operators", "getOperators", {
+                            pageSize: pageSize,
+                            pageNum: pageNum
                         });
                     }}
                     fields={[
