@@ -15,6 +15,7 @@ import {SimpleAddForm} from "@itecgo/blocks/dist/forms/SimpleAddForm/SimpleAddFo
 import {Container} from "react-bootstrap";
 import {SimpleToast, Toastify} from "@itecgo/blocks/dist/components/SimpleToast/SimpleToast";
 import {SimpleToastType} from "@itecgo/blocks/dist/components/SimpleToast/SimpleToastType";
+import {SimpleExport} from "@itecgo/blocks/dist/components/SimpleExport/SimpleExport";
 
 export class App extends React.Component<any, any> {
     dataProvider: SimpleDataProvider
@@ -29,6 +30,16 @@ export class App extends React.Component<any, any> {
     }
 
     render() {
+        let resource = "customers/";
+
+        let fields = [
+            new SimpleNumberField("编号", "id", 0),
+            new SimpleDateTimeField("创建时间", "date"),
+            new SimpleTextField("名称", "name"),
+            new SimpleTextField("手机号码", "mobile"),
+            new SimpleBooleanField("是否合法", "mobileIsValid")
+        ];
+
         return (
             <Container>
                 <SimpleNavbar
@@ -119,26 +130,28 @@ export class App extends React.Component<any, any> {
                     },
                 ]}/>
 
+                <SimpleExport
+                    pageSize={10}
+                    dataProvider={this.dataProvider}
+                    resource={resource}
+                    action={"getCustomers/"}
+                    fields={fields}
+                />
+
                 <SimpleTable
                     pageSize={10}
                     initialPageNum={0}
                     dataProvider={this.dataProvider}
-                    resource={"customers/"}
+                    resource={resource}
                     action={"getCustomers/"}
-                    fields={[
-                        new SimpleNumberField("编号", "id", 0),
-                        new SimpleDateTimeField("创建时间", "date"),
-                        new SimpleTextField("名称", "name"),
-                        new SimpleTextField("手机号码", "mobile"),
-                        new SimpleBooleanField("是否合法", "mobileIsValid")
-                    ]}
+                    fields={fields}
                 />
 
                 <SimpleToast/>
 
                 <SimpleAddForm
                     dataProvider={this.dataProvider}
-                    resource={"customers/"}
+                    resource={resource}
                     addAction={"addCustomer/"}
                     addExtraData={{
                         operatorId: 1
@@ -170,7 +183,7 @@ export class App extends React.Component<any, any> {
 
                 <SimpleUpdateForm
                     dataProvider={this.dataProvider}
-                    resource={"customers/"}
+                    resource={resource}
                     getByIdAction={"getCustomer/"}
                     updateAction={"updateCustomer/"}
                     updateExtraData={{
