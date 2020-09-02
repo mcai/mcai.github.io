@@ -1119,10 +1119,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@itecgo/blocks@^0.0.15":
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/@itecgo/blocks/-/blocks-0.0.15.tgz#3af74ac558852b8ca271ebefacae6038fa39fb21"
-  integrity sha512-weg4/E488xstFyzmeIlPxKjUOcbPiU3myRAIUQtMRpEJ9LumWZFVCHDXY5OSDAP+Te/0KmlTrCiWWvdayRA3hA==
+"@itecgo/blocks@^0.0.17":
+  version "0.0.17"
+  resolved "https://registry.yarnpkg.com/@itecgo/blocks/-/blocks-0.0.17.tgz#5bbb7f02df4ca57d3d01cce94f3c6fe827c7aef9"
+  integrity sha512-ba4IRUv6KlV9ryi6oqMMZlh/hAJylwbRd/7sXAoKjjp7j7ePOGauc7FI1D6KgQndmuN4y1Sfl71Naam3M03z3g==
   dependencies:
     bootstrap "^4.5.2"
     linq "^3.2.2"
@@ -1131,6 +1131,7 @@
     react "^16.13.1"
     react-bootstrap "^1.3.0"
     react-data-export "^0.6.0"
+    react-dom "^16.13.1"
     superagent "^6.1.0"
     xlsx "^0.16.6"
 
