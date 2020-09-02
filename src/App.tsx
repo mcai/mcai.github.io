@@ -15,6 +15,7 @@ import {SimpleAddForm} from "@itecgo/blocks/dist/forms/SimpleAddForm/SimpleAddFo
 import {Container} from "react-bootstrap";
 import {SimpleToast, Toastify} from "@itecgo/blocks/dist/components/SimpleToast/SimpleToast";
 import {SimpleToastType} from "@itecgo/blocks/dist/components/SimpleToast/SimpleToastType";
+import {SimpleActionsField} from "@itecgo/blocks/dist/fields/SimpleActionsField";
 
 export class App extends React.Component<any, any> {
     dataProvider: SimpleDataProvider
@@ -36,7 +37,13 @@ export class App extends React.Component<any, any> {
             new SimpleDateTimeField("创建时间", "date"),
             new SimpleTextField("名称", "name"),
             new SimpleTextField("手机号码", "mobile"),
-            new SimpleBooleanField("是否合法", "mobileIsValid")
+            new SimpleBooleanField("是否合法", "mobileIsValid"),
+            new SimpleActionsField("操作", [
+                {
+                    text: "编辑",
+                    urlFunc: item => `http://www.ikzao.com:3000/Customer/${item.id}`
+                }
+            ])
         ];
 
         return (
