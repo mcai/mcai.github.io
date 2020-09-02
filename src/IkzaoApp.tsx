@@ -133,6 +133,9 @@ export class IkzaoApp extends React.Component<any, any> {
                     dataProvider={this.dataProvider}
                     resource={"customers/"}
                     addAction={"addCustomer/"}
+                    addExtraData={{
+                        operatorId: 1
+                    }}
                     inputs={
                         [
                             <SimpleTextInput label={"名称"} name={"name"}/>,
