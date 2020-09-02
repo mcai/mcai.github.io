@@ -17,7 +17,7 @@
   "author": "Min Cai",
   "license": "MIT",
   "dependencies": {
-    "@itecgo/blocks": "^0.0.27",
+    "@itecgo/blocks": "^0.0.31",
 
     "bootstrap": "^4.5.2",
     "react": "^16.13.1",

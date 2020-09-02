@@ -12,6 +12,7 @@ import {SimpleNumberField} from "@itecgo/blocks/dist/fields/SimpleNumberField";
 import {SimpleTextInput} from "@itecgo/blocks/dist/inputs/SimpleTextInput/SimpleTextInput";
 import {SimpleUpdateForm} from "@itecgo/blocks/dist/forms/SimpleUpdateForm/SimpleUpdateForm";
 import {SimpleAddForm} from "@itecgo/blocks/dist/forms/SimpleAddForm/SimpleAddForm";
+import {Container} from "react-bootstrap";
 
 export class IkzaoApp extends React.Component<any, any> {
     dataProvider: SimpleDataProvider
@@ -24,7 +25,7 @@ export class IkzaoApp extends React.Component<any, any> {
 
     render() {
         return (
-            <div>
+            <Container>
                 <SimpleNavbar
                     brand={{
                         title: "蚁克造",
@@ -168,7 +169,7 @@ export class IkzaoApp extends React.Component<any, any> {
                     title: "蚁克造 (C) 2020",
                     href: "http://www.ikzao.com:3000/"
                 }}/>
-            </div>
+            </Container>
         );
     }
 }
