@@ -3,30 +3,50 @@ import {SimpleFooter} from "@itecgo/blocks/dist/components/SimpleFooter/SimpleFo
 import {SimpleBreadcrumb} from "@itecgo/blocks/dist/components/SimpleBreadcrumb/SimpleBreadcrumb";
 import {SimpleNavbar} from "@itecgo/blocks/dist/components/SimpleNavbar/SimpleNavbar";
 import {SimpleTable} from "@itecgo/blocks/dist/components/SimpleTable/SimpleTable";
-import {Formatting} from "@itecgo/blocks/dist/utils/Formatting";
 import {SimpleDataProvider} from "@itecgo/blocks/dist/data/SimpleDataProvider";
 import {SimpleRestDataProvider} from "@itecgo/blocks/dist/data/SimpleRestDataProvider";
+import {SimpleTextField} from "@itecgo/blocks/dist/fields/SimpleTextField";
+import {SimpleBooleanField} from "@itecgo/blocks/dist/fields/SimpleBooleanField";
+import {SimpleDateTimeField} from "@itecgo/blocks/dist/fields/SimpleDateTimeField";
+import {SimpleNumberField} from "@itecgo/blocks/dist/fields/SimpleNumberField";
 
-export interface Paging<ItemT> {
-    itemsInCurrentPage: ItemT[]
-    count: number,
-    pageCount: number
-}
-
-export interface RestOperator {
+export interface RestCustomer {
     id: number
-    guid: string
-    barcodeJpgFileName: string
     name: string
+
+    companyName: string
+
     mobile: string
+    mobileIsValid: boolean
+
+    phone: string
+
+    wechat: string
+    wangwang: string
+
+    email: string
+    web: string
+
+    province: string
+    city: string
+    district: string
+    address: string
+
     date: string
 
-    numCustomers: number
+    operatorId: number
+    operatorName: string
+    operatorMobile: string
+
+    description: string
+
     numDesignDocuments: number
     numQuotations: number
     numOrders: number
+    numPaidOrCutOrders: number
+    totalPriceOfPaidOrCutOrders: number
 
-    firstCustomerId: number
+    canRemove: boolean
 }
 
 export class IkzaoApp extends React.Component<any, any> {
@@ -124,7 +144,7 @@ export class IkzaoApp extends React.Component<any, any> {
                     },
                     {
                         key: "operators",
-                        title: "员工管理",
+                        title: "客户管理",
                         active: true
                     },
                 ]}/>
@@ -133,21 +153,14 @@ export class IkzaoApp extends React.Component<any, any> {
                     pageSize={10}
                     pageNum={0}
                     dataProvider={this.dataProvider}
-                    resource={"operators/"}
-                    action={"getOperators/"}
+                    resource={"customers/"}
+                    action={"getCustomers/"}
                     fields={[
-                        {
-                            title: "编号",
-                            render: (item: RestOperator) => (item.id + "")
-                        },
-                        {
-                            title: "创建时间",
-                            render: (item: RestOperator) => (Formatting.toFormattedDateTimeString(item.date) + "")
-                        },
-                        {
-                            title: "名称",
-                            render: (item: RestOperator) => (item.name)
-                        }
+                        new SimpleNumberField("编号", "id", 0),
+                        new SimpleDateTimeField("创建时间", "date"),
+                        new SimpleTextField("名称", "name"),
+                        new SimpleTextField("手机号码", "mobile"),
+                        new SimpleBooleanField("是否合法", "mobileIsValid")
                     ]}
                 />
 
