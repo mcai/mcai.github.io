@@ -1182,14 +1182,15 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@itecgo/blocks@^0.0.55":
-  version "0.0.55"
-  resolved "https://registry.yarnpkg.com/@itecgo/blocks/-/blocks-0.0.55.tgz#5bc795fb8ea9538b544aaee4dc2fb64daafa1106"
-  integrity sha512-7nDz/+IlAkEZw7BBM61wpjbIAfTxNdj8Q8OWkgky8S084ZZHeFtRaTRB0cCEL1BOTvee8/FkkdXVNlvUT2BSVQ==
+"@itecgo/blocks@^0.0.58":
+  version "0.0.58"
+  resolved "https://registry.yarnpkg.com/@itecgo/blocks/-/blocks-0.0.58.tgz#127de1de785d3dd4a843b141a3ed03d855262c71"
+  integrity sha512-3lcXZSN8uhwFLfTH5j2xo008yF/NSaaNqcx4dZGEXI36A6TLAYEOHpvsZGIssCSMGfkZeq4kgFL62+1bwbooMA==
   dependencies:
     bootstrap "^4.5.2"
     final-form "^4.20.1"
     formik "^2.1.5"
+    js-cookie "^2.2.1"
     linq "^3.2.2"
     moment "^2.27.0"
     mongoose "^5.10.2"
@@ -6368,6 +6369,11 @@ jest@24.9.0:
   dependencies:
     import-local "^2.0.0"
     jest-cli "^24.9.0"
+
+js-cookie@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.1.tgz#69e106dc5d5806894562902aa5baec3744e9b2b8"
+  integrity sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
