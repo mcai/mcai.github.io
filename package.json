@@ -1,11 +1,11 @@
 {
   "homepage": "http://www.mcai.tips/",
-  "name": "@itecgo/tips",
+  "name": "@itecgo/mcai.github.io",
   "version": "0.0.1",
-  "description": "tips",
+  "description": "mcai.github.io",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mcai/tips.git"
+    "url": "git+https://github.com/mcai/mcai.github.io.git"
   },
   "files": [
     "README.md",
