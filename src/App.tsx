@@ -8,7 +8,7 @@ export class App extends React.Component<any, any> {
         let navbar = (
             <SimpleNavbar
                 brand={{
-                    title: "mcai.github.io - Tips Sharing",
+                    title: "mcai.github.io - MCAI's Tips",
                     href: "/"
                 }}
                 sections={[
